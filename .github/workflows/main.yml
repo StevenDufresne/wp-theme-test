@@ -23,4 +23,4 @@ jobs:
       - uses: actions/checkout@v2
         
       - name: Test My Action
-        uses: StevenDufresne/wp-structure-validator@v1.37
+        uses: StevenDufresne/wp-structure-validator@v1.38
