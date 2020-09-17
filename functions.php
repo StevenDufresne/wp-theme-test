@@ -53,6 +53,8 @@ function block_base_theme() {
         'video-active-callback'  => 'is_front_page',
     ) );
 
+    add_theme_support( "custom-background", array() );
+
 }
 endif; // block_base_theme
 add_action( 'after_setup_theme', 'block_base_theme' );
