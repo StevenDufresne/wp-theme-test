@@ -24,3 +24,5 @@ jobs:
         
       - name: Test My Action
         uses: StevenDufresne/wp-structure-validator@v1.82
+        with:
+          root-folder: ./test
