@@ -35,6 +35,24 @@ function block_base_theme() {
     add_theme_support( 'wp-block-styles' );
  
     add_theme_support( 'align-wide' );
+
+    add_theme_support( 'custom-header', array(
+        'default-image'          => '',
+        'random-default'         => false,
+        'width'                  => 0,
+        'height'                 => 0,
+        'flex-height'            => false,
+        'flex-width'             => false,
+        'default-text-color'     => '',
+        'header-text'            => true,
+        'uploads'                => true,
+        'wp-head-callback'       => '',
+        'admin-head-callback'    => '',
+        'admin-preview-callback' => '',
+        'video'                  => false,
+        'video-active-callback'  => 'is_front_page',
+    ) );
+
 }
 endif; // block_base_theme
 add_action( 'after_setup_theme', 'block_base_theme' );
