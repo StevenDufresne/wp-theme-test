@@ -24,3 +24,4 @@ jobs:
         
       - name: Test My Action
         uses: StevenDufresne/wp-theme-validation-action-experiment@main
+      - run: printenv
