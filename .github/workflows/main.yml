@@ -20,8 +20,15 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-#       - uses: actions/checkout@v2
+      - uses: actions/checkout@v2
         
-#       - name: Test My Action
-#         uses: StevenDufresne/wp-theme-validation-action-experiment@main
-      - run: printenv
+      - name: Test My Action
+        uses: StevenDufresne/wp-theme-validation-action-experiment@try/gif
+        id: test
+        with:
+          accessible-ready: false
+      - uses: actions/upload-artifact@v2
+        if: ${{ always() }}
+        with:
+          name: Screenshots
+          path: ${{ steps.test.outputs.screenshots }}
